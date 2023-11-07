@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Recipe {
+  id                  String        @id
+  name                String
+  photoUrl            String
+  description         String?
+  ingredients         String[]
+  cuisine             String?
+  dietaryRestrictions String?
+  createdAt           DateTime      @default(now())
+  creatorId           String
+  directions          String
+  numberOfServing     Int
+  favorites           Favorite[]
+  rating              Rating[]
+  RecipeCreator       RecipeCreator @relation(fields: [creatorId], references: [id])
+  review              Review[]
+}
+
+model RecipeCreator {
+  id        String   @id
+  email     String   @unique
+  firstName String
+  lastName  String
+  recipes   Recipe[]
+}
+
+model Favorite {
+  id        String   @id
+  userId    String
+  recipeId  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  recipe    Recipe   @relation(fields: [recipeId], references: [id],onDelete: Cascade)
+}
+
+model Rating {
+  id       String @id
+  userId   String
+  recipeId String
+  comment  String
+  rating   Int
+  recipe   Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+  user     User   @relation(fields: [userId], references: [id])
+  
+}
+
+model Review {
+  id          String  @id
+  thought     String
+  title       String
+  comment     String
+  displayName String
+  country     String?
+  rating      Int
+  recipeId    String
+  recipe      Recipe  @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id               String     @id
+  username         String
+  password         String?
+  email            String?    @unique
+  googleId         String?    @unique
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+  resetToken       String?
+  resetTokenExpiry DateTime?
+  photoUrl         String?
+  favorites        Favorite[]
+  rating           Rating[]
+  token            Token[]
+}
+
+model Token {
+  id        String   @id
+  token     String   @unique
+  userId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id])
+}
