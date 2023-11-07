@@ -1,0 +1,431 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*nav bar*/
+.navbar{
+    background-color: #D5D5D7;
+    max-height: 60px;
+    width: 100%;
+    display: flex;
+    padding: 10px 2%;
+    
+}
+.navbar .logo{
+    width: 15%;
+    justify-content: flex-end;
+    height: 100%;
+    margin-right: 8%;
+    
+}
+.navbar .logo img{
+    height: 40px;
+    
+}
+.navbar .logo h1{
+    font-size: 1.3em;
+    line-height: 2em;
+}
+.nav-links{
+    height: 60px;
+    width: 25%;
+    padding: 10px;
+}
+
+.nav-links a{
+    color: black;
+    margin: auto 50px auto 10px;
+}
+.nav-links a:hover{
+    background-color: #F28123;
+    border: 10px solid #F28123;
+    border-radius: 5px;
+    color: white;
+}
+.navbar .search-bar{
+    width: 20%;
+}
+.navbar .search-bar input{
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    padding: 10px 30px;
+    position: relative;
+}
+.search-bar i{
+    position: absolute;
+    z-index: 5;
+    margin: 12px 0 0 10px;
+    font-size: 18px;
+    opacity: 0.5;
+}
+.navbar .user-icons{
+    width: 12%;
+    display: flex;
+    flex-direction: row;
+}
+.navbar .user-icons .hidden-heart{
+    display: none;
+    
+}
+.navbar .user-icons .visible-heart{
+    display: block;
+    color: #F28123;
+}
+.navbar .user-icons .liked-check{
+    display: none;
+}
+
+.navbar .user-icons i{
+    font-size: 22px;
+    margin: 8px 8px 0 0;
+}
+
+.navbar .user-icons img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*mobile nav*/
+.mobile-nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 20px;
+    color: #F28123;
+    font-size: 30px;
+}
+
+/*footer*/
+.footer{
+    background-color: #8D8E91;
+    color: white;
+    padding: 25px;
+}
+.footer .logo{
+    width: 55%;
+    display: flex;
+}
+.footer .logo img{
+    height: 50px;
+    
+}
+.footer .logo h1{
+    font-size: 1.5em;
+    line-height: 2.5em;
+    margin-left: 5px;
+}
+.footer .app-buttons{
+   display: flex;
+   flex-direction: column;align-items: flex-start;
+}
+.footer .app-buttons img{
+    cursor: pointer;
+}
+
+.footer .app-buttons .playstore-btn{
+    height: 65px;
+    margin: 20px 0 0;
+}
+.footer .app-buttons .apple-btn{
+    height: 50px;
+    margin: 20px 0 60px;
+}
+
+
+#newsletter-input{
+    width: 70%;
+    height: 45px;
+    border: none;
+}
+.footer-btn{
+    width: 25%;
+    border-radius: 0;
+    margin-left: 10px;
+    
+}
+.footer form{
+    padding: 0;
+    display: block;
+}
+
+.footer h3{
+    font-size: 1.3em;
+    font-weight: 100;
+    word-spacing: 2px;
+    margin-bottom: 25px;
+}
+.footer p {
+    margin: 20px auto;
+}
+.footer .social-icons{
+    height: 50px;
+    margin: 30px auto;
+}
+.social-icons h1{
+    display: none;
+}
+.social-icons i{
+    font-size: 40px;
+    color: #F28123;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.footer h4{
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-bottom: 18px;
+}
+
+/*grid item*/
+.grid-item {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+    cursor: pointer;
+}
+.grid-item .liked-check{
+    display: none;
+}
+.grid-item img{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 3;
+}
+.grid-item .like-btn{
+    position: absolute;
+    color: #F28123;
+    background-color: rgb(69, 65, 65);
+    width: 45px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 84%;
+    z-index: 5;
+    margin-top: -19%;
+    margin-bottom: 10%;
+    padding: 2%;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+}
+.grid-item .grid-title{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.overlay{
+    display: none;
+}
+
+ 
+
+.recipes .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: block flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+   
+}
+  
+.recipes .grid-item:hover .overlay {
+    opacity: 1;
+    z-index: 9;
+}
+  
+.recipes .overlay i {
+    color: white;
+    font-size: 24px;
+}
+  
+.recipes .overlay span {
+    color: white;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*delet modal*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+  
+.modal-content {
+    background-color: white;
+    height: 250px;
+    width: 85%;
+    padding: 10%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+  
+.modal-btn-group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+  
+.modal-btn {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+  
+.cancel {
+    background-color: white;
+    border: 1px solid #F28123;
+    color: #333;
+}
+  
+.delete {
+    background-color: #F28123;
+    color: white;
+}
+
+
+@media (max-width: 1200px) {
+
+    .navbar{
+        display: none;
+    }
+
+}
+@media (min-width: 1200px) {
+
+
+    .footer{
+        height: 65vh;
+        padding: 40px 80px;
+    }
+    .footer .logo{
+
+
+        margin-bottom: 4%;
+    }
+    .footer .logo img{
+        height: 50px;
+        
+    }
+    .footer .logo h1{
+        font-size: 1.5em;
+        line-height: 2.5em;
+        margin-left: 5px;
+
+    }
+
+    .footer .app-buttons{
+        float: right;
+        margin: -100px auto 50px;
+    }
+    .footer h3{
+        font-size: 1.1em;
+    }
+
+    .footer form{
+        padding: 0;
+        float: left;
+        font-size: 0.8em;
+    }
+    .footer-links{
+        float: right;
+        margin-right: -165px;
+        margin-top: 40px;
+        text-align: right;
+    }
+    .footer p{
+        float: left;
+    }
+    .footer h1{
+        display: block;
+        letter-spacing: 2px;
+    }
+    .footer .social-icons{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+    .grid-item img{
+        width: 100%;
+        height: 185px;
+        border-radius: 5px;
+        margin-bottom: 10px;    
+    }
+    .grid-item .like-btn{
+        margin-left: 80%;
+        margin-top: -20%;
+        padding: 1%;
+    }
+    .grid-item span{
+        font-weight: bold;
+        font-size: 1.2em; 
+        margin-top: 6%;
+    }
+
+    .recipes .overlay {
+        height: 185px;
+        border-radius: 5px;
+       
+    }  
+    .recipes .grid-item .like-btn{
+        margin-left: 84%;
+        margin-top: -16%;
+        
+    }
+    .recipes .overlay i {
+        color: white;
+        font-size: 34px;
+    }
+      
+    .recipes .overlay span {
+        color: white;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .modal-content {
+        height: 200px;
+        width: 25%;
+        padding: 3.5%;
+    }
+    .modal-btn-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .mobile-nav{
+        display: none;
+    }
+}

@@ -1,0 +1,586 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #F28123;
+}
+
+.hero-image{
+    display: none;
+    background-image: url(/burger2-lg.jpg);
+    
+}
+.logo{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    color: #F28123;
+}
+.logo h1{
+    margin-left: 5px;
+}
+.logo h1 span{
+    color: #b45100;
+}
+.user-auth .logo{
+    height: 50px;
+    justify-content: flex-start;
+    margin: 50px 0;
+}
+.user-auth .logo img{
+    height: 40px;
+}
+.user-auth .logo h1{
+    font-size: 1.3em;
+    line-height: 2.2em;
+}
+
+.signup h1, .login h1{
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.user-auth{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.user-auth label{
+
+    margin: 5px 0;
+
+    font-size: 1.2em;
+}
+
+.user-auth input{
+    height: 40px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    border: 1px solid ;
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+.user-auth p{
+    font-size: 0.9em;
+    margin: 15px auto;
+}
+
+.user-auth p span{
+    font-weight: 700;
+}
+
+.user-auth button{
+    border-radius: 6px;
+    height: 45px;
+    background-color: #F28123;
+    color: white;
+    border: none;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#google{
+    background-color: white;
+    color: #F28123;
+    border: 2px solid black;
+}
+#login-link, #signup-link{
+    margin-top: 15px;
+    text-align: center;
+    font-size: small;
+}
+.btn-txt{
+    text-align: center;
+    font-size: larger;
+    color: #F28123;
+}
+
+.check-email h1{
+    text-align: center;
+}
+
+
+/*homepage*/
+.homepage{
+    padding: 10px 5%;
+}
+.homepage .mobile-logo{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    border-top: 0.5px #D5D5D7 solid;
+    border-bottom: 0.5px #D5D5D7 solid;
+    text-align: center;
+    padding: 10px;
+    
+}
+.homepage .mobile-logo img{
+    height: 30px;
+    margin-left: 32%;
+}
+.homepage .mobile-logo h1{
+    font-size: 1em;
+    line-height: 2.2em;
+    color: #F28123;
+    margin-left: 5px;
+}
+
+.homepage .heading{
+    text-align: center;
+}
+.homepage .heading h2{
+    margin: 30px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+    font-weight: 600;
+}
+.homepage .heading p{
+    margin: 10px;
+}
+.homepage .banner{
+    height: 200px;
+    width: 100%;
+    margin: 50px auto;
+    background-image: url(./images/spag&balls.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 40px 0 0 50px;
+    font-size: 0.9em;
+}
+.homepage .banner::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .5;
+    z-index: -1;
+}
+.bxs-star{
+    display: none;
+}
+
+.main .create-recipe{
+    display: none;
+}
+/* Grid */
+.first-grid, .second-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.main h2{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+.main p{
+    font-size: 0.8em;
+    margin: 10px 0 20px;
+}
+
+/*profile page*/
+
+
+
+.profile-page h1{
+    text-align: center;
+    font-size: 1.3em;
+}
+.profile-page .profile-picture img{
+    border-radius:50%;
+    height: 100px;
+    width: 100px;
+    margin: 30px auto 15px 37%;
+}
+.profile-page .profile-picture button{
+    width: 200px;
+    height: 40px;
+    background-color: #F28123;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin-left: 24%;
+}
+.profile-page form button{
+    width: 30%;
+}
+
+.profile-page .second-grid{
+    padding: 10px 5%;
+}
+.profile-page .second-grid img{
+    border-radius: 0;
+    height: 220px;
+}
+
+/*add recipe page*/
+.add-recipe .banner{
+    padding: 10px 5%;
+}
+
+.add-recipe .banner h2{
+    font-size: 1.6em;
+    word-spacing: 3px;
+    margin-bottom: 20px;
+}
+.add-recipe .banner p{
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.add-recipe  img{
+    height: 220px;
+    width: 100%;
+    margin: 25px auto 10px;
+    border-radius: 7px;
+}
+
+.add-recipe form h2{
+    margin-bottom: 20px;
+}
+.add-recipe form p{
+    color: #929294;
+    text-align: left;
+}
+
+.add-recipe form label span{
+    color: #F28123;
+}
+.add-recipe #servings{
+    width: 50%;
+}
+.add-recipe textarea{
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em
+}
+
+.add-recipe .photo-guide{
+    background-color: #cacacd;
+    padding: 7%;
+    color: black;
+    margin: 30px auto;
+}
+.add-recipe .photo-guide h3{
+    color: green;
+    font-size: 1.5em;
+}
+.add-recipe .photo-guide h4{
+    color: red;
+    font-size: 1.5em;
+}
+.add-recipe .photo-guide p{
+    color: black;
+}
+/*rate and review*/
+.rate-review{
+    padding: 5%;
+}
+.rate-review h2{
+    font-size: 1.7em;
+    margin: 12% 0;
+}
+.rate-review .grid-item img{
+    border-radius: 0;
+}
+.rate-review .grid-item .bxs-star{
+    display: inline-block;
+    color: #929294;
+    font-size: 2.5em;
+    margin-top: 10px;
+}
+
+/*Saved Recipes*/
+.saved-recipes{
+    padding: 6%;
+}
+.saved-recipes h1{
+    margin-bottom: 40px;
+}
+
+.saved-recipes .grid-item img{
+    border-radius: 0;
+    height: 220px;
+}
+.saved-recipes .grid-item .like-btn{
+    width: 150px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 46% !important;
+}
+.saved-recipes .grid-item .like-btn span{
+    margin: 7px 5px 0 10px;
+
+    text-align: center;
+    font-size: 0.5em;
+}
+
+@media (max-width: 1200px) {
+
+    .add-recipe .photo-guide #mobile-hidden{
+        display: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .signup, .login, 
+    .forgot-password, 
+    .check-email{
+        display: flex; 
+    }
+    .hero-image{
+        display: block;
+        background-size: cover;
+        background-position: left;
+        height: 100vh;
+        width: 60%;
+        padding: 0;
+        margin: 0;
+        opacity: 0.8;
+    }
+    .user-auth .logo{
+        height: 100px;
+        justify-content: flex-start;
+    }
+    .user-auth .logo img{
+        height: 60px;
+    }
+    .user-auth .logo h1{
+        font-size: 1.3em;
+        line-height: 3.2em;
+    }
+    form{
+        width: 30%;
+        float: right;
+        margin: auto;
+    }
+    .signup h1, .login h1{
+        text-align: left;
+        font-weight: 700;
+    }
+    form button{
+        margin-top: 10px;
+        height: 40px;
+    }
+    .btn-txt{
+        padding-top: 20px;
+        font-weight: 700;
+    }
+    #login-link, #signup-link{
+        margin-top: 15px;
+    }
+    .check-email h1{
+        text-align: center;
+    }
+    /*homepage*/
+    .homepage .heading{
+        display: flex;
+        justify-content: space-between;
+    }
+    .homepage .mobile-logo{
+        display: none;
+    }
+    .homepage .heading h2{
+        margin: 30px 0 0 0;
+        letter-spacing: 1px;
+        word-spacing: 5px;
+        font-weight: 600;
+    }
+    .homepage .heading p{
+        margin-top: 20px;
+    }
+    .homepage .banner{
+        height: 250px;
+        margin: 10px auto 60px;
+        color: black;
+        padding: 50px 0 0 200px;
+        font-size: 1.7em;
+    }
+    
+    .bxs-star{
+        display: inline-block;
+        color: #F28123;
+
+    }
+    .homepage .banner::after{
+        display: none;
+    }
+    .main .recipes{
+        display: flex;
+        justify-content: space-between;
+    }
+    .main .create-recipe{
+        display: block;
+        color: white;
+        background-color: #F28123;
+        height: 40px;
+        width: 150px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    /*grid*/
+
+    .main h2{
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+    .main p{
+        font-size: 0.9em;
+        margin: 10px 0 20px;
+    }
+    .main p a{
+        text-decoration: underline 1.5px;
+    }  
+    
+    .first-grid .grid-item {
+        width: calc(25% - 15px); 
+        height: 180px; 
+        margin-bottom: 60px;
+    }
+    .second-grid .grid-item {
+        width: calc(33% - 20px); 
+        height: 150px; 
+        margin-bottom: 130px;
+    }
+    .second-grid .grid-item .like-btn{
+        margin-left: 24%;
+    }
+    
+        
+    /*profile page*/
+
+
+    .profile-page{
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+    .profile-page h1{
+        text-align: left;
+        margin-left: 10%;
+    }
+    .profile-page .profile-picture{
+        display: flex;
+        flex-direction: row; 
+    }
+    .profile-page .profile-picture img{
+        height: 120px;
+        width: 120px;
+        margin: 40px 0 0 10%;
+    }
+    .profile-page .profile-picture button{
+        margin: 80px 0 0 30px;
+    }
+    .profile-page form{
+        float: left; 
+        width: 50%;
+        margin-left: 8%;
+    }
+    .profile-page .second-grid{
+        padding: 0;
+        margin-top: 32.5%;
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+    .profile-page .second-grid .grid-item .like-btn{
+        margin-left: 22%;
+      }
+
+    /*add recipe page*/
+    .add-recipe {
+        width: 75%;
+        margin-top: 30px;
+    }
+    .add-recipe .banner {
+        padding-left: 8%;
+    }
+    .add-recipe .banner p{
+        font-size: 0.9em;
+    }
+    .add-recipe .banner img{
+        height: 500px;
+    }
+    .add-recipe  img{
+        height: 220px;
+        width: 100%;
+        margin: 25px auto 10px;
+        border-radius: 7px;
+    }
+    .add-recipe form{
+        float: left;
+        padding-left: 8%;
+        width: 100%;
+    }
+    .add-recipe #servings{
+        width: 100%;
+    }
+    .add-recipe textarea{
+        padding: 30px 15px;
+    }
+    .add-recipe form button{
+        width: 20%;
+    }
+    .add-recipe form #upload-btn{
+        background-color: white;
+        color: #F28123;
+        border: #F28123 2px solid;
+    }
+
+    .add-recipe .photo-guide{
+        margin-left: 8%;
+        display: flex;
+        flex-direction: column;
+    }
+    .add-recipe .photo-guide .top div{
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 20px -2%;
+    }
+    .photo-guide h3{
+        margin: 30px 0 0;
+    }
+    .add-recipe .photo-guide h4{
+        margin: 20px 0 ;
+    }
+    .add-recipe .photo-guide img{
+        width: 47%;
+    }
+
+    /*rate and review*/
+    .rate-review{
+        padding-top: 2%;
+    }
+    .rate-review h2{
+        margin: 2% 0;
+    }
+    .rate-review .grid-item{
+        margin-bottom: 15%;
+    }
+    .rate-review .grid-item img{
+        height: 220px;
+    }
+    .rate-review .grid-item .bxs-star{
+        font-size: 2em;
+    }
+
+    /*save and rete*/
+    .saved-recipes .grid-item .like-btn{
+        margin-left: 16% !important;
+    }
+}
